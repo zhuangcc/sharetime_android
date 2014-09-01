@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        >
+        <Button 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登陆"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>"
+    </RelativeLayout>
+   <EditText 
+       android:id="@+id/edt1"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/top"
+       android:hint="请输入用户名"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="10dp" /> 
+    <EditText 
+       android:id="@+id/edt2"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/edt1"
+       android:hint="请输入密码"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="10dp" />    
+       <RelativeLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/edt2">
+           <Button 
+               android:id="@+id/forget"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="#00f"
+               android:layout_marginLeft="10dp"
+               android:layout_centerVertical="true"
+               android:background="#0000"
+               android:text="忘记用户名或密码"/>
+           <Button
+               android:id="@+id/login"
+               android:layout_alignParentRight="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="登陆"/>"
+       </RelativeLayout>
+           "
+</RelativeLayout>

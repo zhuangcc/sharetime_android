@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainweixin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#eee" >  
+    <RelativeLayout
+        android:id="@+id/top"
+        android:orientation="horizontal"
+         android:layout_alignParentTop="true"
+         android:background="@drawable/time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="时间分享" 
+	        android:textSize="35dp"/>
+	    <LinearLayout
+	        android:orientation="horizontal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true">
+	        
+	        <Button
+	        android:id="@+id/login"
+	        android:layout_width="50dp"
+	        android:layout_height="32dp"  
+	        android:text="登陆"
+	        android:textSize="12dp" />
+	        <Button
+	        android:id="@+id/register"
+	        android:layout_width="50dp"
+	        android:layout_height="32dp"
+	        android:text="注册" 
+	         android:textSize="12dp" />
+	         <ImageButton 
+			    android:id="@+id/shake_btn"
+			    android:layout_width="50dp" 
+        		android:layout_height="32dp"
+        		android:layout_marginRight="1dp"
+        		android:src="@drawable/find_more_friend_shake"
+			    />   
+	    </LinearLayout>
+    </RelativeLayout>
+ 
+    <RelativeLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/bottom_bar"
+        >             
+      
+        <ImageView
+        	android:id="@+id/img_tab_now"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"        	     	
+        	android:scaleType="matrix"
+        	android:layout_gravity="bottom"            	
+            android:layout_alignParentBottom="true"
+        	android:src="@drawable/tab_bg" />              
+         
+         
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="2dp"            
+        	>
+        	
+            <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_first"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/tab_weixin_pressed" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="首页"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_list"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/tab_address_normal" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="活动列表"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_my"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/tab_find_frd_normal" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="我的活动"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_more"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/tab_settings_normal" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="更多"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>                 
+        </LinearLayout>     
+    </RelativeLayout>
+  <RelativeLayout
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/top"
+    	android:layout_above="@id/main_bottom"
+    	android:id="@+id/viewpager" >
+       <android.support.v4.view.ViewPager
+        	android:id="@+id/tabpager"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center" > 
+        </android.support.v4.view.ViewPager>   
+      
+    </RelativeLayout>
+    
+</RelativeLayout>
